@@ -445,7 +445,7 @@ type LocalTransactionState int
 const (
 	CommitMessageState LocalTransactionState = iota + 1
 	RollbackMessageState
-	UnkonwnState
+	UnknowState
 )
 
 type TransactionListener interface {

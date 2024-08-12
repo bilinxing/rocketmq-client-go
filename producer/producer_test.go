@@ -373,13 +373,13 @@ type Listener struct {
 
 func (dl *Listener) ExecuteLocalTransaction(msg *primitive.Message) primitive.LocalTransactionState {
 	log.Printf("ExecuteLocalTransaction for transactionID: %v\n", msg.TransactionId)
-	return primitive.UnkonwnState
+	return primitive.UnknowState
 }
 
 // 回查函数，只有当 ExecuteLocalTransaction 函数返回的不是CommitMessageState或RollbackMessageState状态，才会调用
 func (dl *Listener) CheckLocalTransaction(msg *primitive.MessageExt) primitive.LocalTransactionState {
 	log.Printf("CheckLocalTransaction for transactionID: %v\n", msg.TransactionId)
-	return primitive.UnkonwnState
+	return primitive.UnknowState
 }
 
 func TestMessageInTransaction(t *testing.T) {
